@@ -31,12 +31,18 @@ Here is a list of the prototypes of the libc functions recoded in `libasm.so`:
 void	*memcpy(void *dest, const void *src, size_t n);
 void	*memmove(void *dest, const void *src, size_t n);
 void	*memset(void *s, int c, size_t n);
+void *memfrob(void *s, size_t n);
+char *index(const char *s, int c);
 char	*rindex(const char *s, int c);
 int	strcasecmp(const char *s1, const char *s2);
 char	*strchr(const char *s, int c);
+char *strrchr(const char *s, int c);
 int	strcmp(const char *s1, const char *s2);
 size_t	strcspn(const char *s, const char *reject);
 size_t	strlen(const char *s);
 int	strncmp(const char *s1, const char *s2, size_t n);
 char	*strpbrk(const char *s, const char *accept);
+char *strstr(const char *haystack, const char *needle);
+char *strfry(char *string);
+long syscall(long number, ...);
 ```
